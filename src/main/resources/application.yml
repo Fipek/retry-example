@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: retry-example
+  cloud:
+    openfeign:
+      client:
+        config:
+          exchange-rate-api:
+            url: https://v6.exchangerate-api.com/v6/f78a42e03016f96bbff81ac6/latest
+            loggerLevel: full
+
+springdoc:
+  swagger-ui:
+    path: /
+
+logging:
+  level:
+    com.fipek.retryexample.client: DEBUG
